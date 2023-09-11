@@ -1,5 +1,5 @@
 // Get references to the elements by their data-testid attributes
-const slackUserNameElement = document.getElementById("slackDisplayImage");
+const slackUserNameElement = document.getElementById("ALIYU IDRIS");
 const currentDayOfTheWeekElement = document.getElementById(
   "currentDayOfTheWeek"
 );

@@ -16,6 +16,7 @@ body {
 }
 
 .profile {
+  text-emphasis-style: 2em;
   padding-top: -2em;
   margin-left: 5em;
   margin-right: 5em;
@@ -25,7 +26,6 @@ body {
   border-radius: 15px;
   margin-top: 5em;
 }
-
 p {
   letter-spacing: 0.1em;
   text-align: center;
