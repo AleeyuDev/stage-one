@@ -1,17 +1,11 @@
-// Get references to the elements by their data-testid attributes
-const slackUserNameElement = document.querySelector(
-  '[data-testid="aliyu idris"]'
-);
-const currentDayOfTheWeekElement = document.querySelector(
-  '[data-testid="currentDayOfTheWeek"]'
-);
-const currentUTCTimeElement = document.querySelector(
-  '[data-testid="currentUTCTime"]'
-);
+(function () {
+  window.onload = function () {
+    parent.iframeLoaded();
+  };
+})();
 
-// Function to update the current day of the week
-function updateDayOfTheWeek() {
-  const daysOfWeek = [
+function getCurrentDay() {
+  const days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -21,23 +15,29 @@ function updateDayOfTheWeek() {
     "Saturday",
   ];
   const currentDate = new Date();
-  const dayOfWeek = daysOfWeek[currentDate.getUTCDay()];
-  currentDayOfTheWeekElement.textContent = dayOfWeek;
+  const currentDay = currentDate.getDay();
+  return days[currentDay];
 }
 
-// Function to update the current UTC time
-function updateUTCTime() {
-  const currentDate = new Date();
-  const utcTime = currentDate.toISOString().slice(11, 19); // Get HH:mm:ss from ISO string
-  currentUTCTimeElement.textContent = utcTime + " UTC";
+function getRealTimeData() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+  const milliseconds = String(now.getMilliseconds()).padStart(3, "0");
+
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}.${milliseconds}`;
 }
 
-// Call the update functions initially
-updateDayOfTheWeek();
-updateUTCTime();
+function updateDataAttributes() {
+  const currentDayElement = document.getElementById("currentDay");
+  const realTimeDataElement = document.getElementById("currentTime");
 
-// Update the current day of the week and UTC time every second
-setInterval(() => {
-  updateDayOfTheWeek();
-  updateUTCTime();
-}, 1000);
+  currentDayElement.textContent = getCurrentDay();
+  realTimeDataElement.textContent = getRealTimeData();
+}
+
+setInterval(updateDataAttributes, 1);

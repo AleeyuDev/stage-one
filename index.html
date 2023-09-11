@@ -5,53 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Track</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQX"/>
   </head>
   <body>
+
     <div class="container">
-       
-      
-      <div class="profile">
-       
-       
-        <img
-          src="/img/IMG_20230902_130823~2.jpg"
-          alt="Aliyu idris "
-          data-testid="slackDisplayImage" />
-          <h1  data-testid="ALIYU IDRIS"> <span>Hi</span>, I'm Aliyu idris </h1>
-          <p>
-             a frontend developer passionate about tech
+      <img alt="Aliyu Idris" data-testid="slackDisplayImage" class="display-img" src="img/IMG_20230902_130823~2.jpg"/>
+      <h1 data-testid="slackUserName">
+          Aliyu Idris
+         </h1>
+      <div class="data-attribute">
+      <strong>
+           Current Day:
+          </strong>
+      <span id="currentDay" data-testid="currentDayOfTheWeek">
+      </span>
+      </div>
+      <div class="data-attribute">
+      <strong>
+           Current UTC Time (in milliseconds):
+          </strong> <br>
+      <span id="currentTime" data-testid="currentUTCTime">
+      </span>
+      </div><br>
+      <div class="data-attribute">
+      <strong>
+           Track: 
+          </strong>
+      <span data-testid="myTrack">Frontend Development
+      </span>
+      </div><br>
+      <a data-testid="githubURL" class="github-btn" href="https://github.com/AleeyuDev/Stage-one">
+          My GitHub Repository
+         </a>
+      <p class="signature">
+          © 2021 aliyu Idris. All rights reserved.
          </p>
-         
-   
-      
-      
-        <div class="date-time">
-          <h1>Day of the Week</h1>
-            <p data-testid="currentDayOfTheWeek"></p>
-           <h1>UTC Time</h1>
-            <p data-testid="currentUTCTime"></p>
-          </div>
-    
-          <div class="track">
-            <h2>my Track:</h2>
-            <h3 data-testid="myTrack">Frontend</3>
-          </div>
-    
-          <div class="github">
-    
-            <h1>get the source code here</h1>
-            <a
-              href="https://github.com/AleeyuDev/Stage_one"
-              data-testid="githubURL"
-              >GitHub Repository</a
-            >
-          </div>
-        </div>
-  
+      </div>
     </div>
+    
+<script nonce="bF0mpCE0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script nonce="bF0mpCE0" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js"></script>
+<script>
+   
+</script>
+
+
     <script src="index.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
 
 
 .
