@@ -1,13 +1,9 @@
 // Get references to the elements by their data-testid attributes
-const slackUserNameElement = document.querySelector(
-  '[data-testid="aliyu idris"]'
+const slackUserNameElement = document.getElementById("Aliyu idris");
+const currentDayOfTheWeekElement = document.getElementById(
+  "currentDayOfTheWeek"
 );
-const currentDayOfTheWeekElement = document.querySelector(
-  '[data-testid="currentDayOfTheWeek"]'
-);
-const currentUTCTimeElement = document.querySelector(
-  '[data-testid="currentUTCTime"]'
-);
+const currentUTCTimeElement = document.getElementById("currentUTCTime");
 
 // Function to update the current day of the week
 function updateDayOfTheWeek() {
